@@ -12,7 +12,6 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "EcoSortDB";
     private static final int DATABASE_VERSION = 1;
 
-    // Tabla de usuarios
     private static final String TABLE_USERS = "usuarios";
     private static final String COL_ID = "id";
     private static final String COL_USERNAME = "username";
@@ -30,7 +29,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 COL_PASSWORD + " TEXT)";
         db.execSQL(createUserTable);
 
-        // Insertar usuario admin por defecto
         ContentValues values = new ContentValues();
         values.put(COL_USERNAME, "admin");
         values.put(COL_PASSWORD, "1234");
