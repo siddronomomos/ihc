@@ -1,4 +1,4 @@
-package com.example.ihc;
+package com.example.EcoSort;
 
 import org.junit.Test;
 

@@ -79,7 +79,18 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="ffffff" />
-                                                <entry key="imagePath" value="C:\Users\ERIKAC~1\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\ERIKAC~1\AppData\Local\Temp\baseline_recycling_24.xml" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundClipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="jar:file:/C:/Users/Erika%20Camarena/AppData/Roaming/JetBrains/IntelliJIdea2025.1/plugins/android/lib/android.jar!/images/material/icons/materialicons/recycling/baseline_recycling_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -91,8 +102,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="D:\Users\Erika Camarena\Downloads\recycling-294079_640.webp" />
-                                                <entry key="scalingPercent" value="47" />
+                                                <entry key="imagePath" value="D:\Users\Erika Camarena\Downloads\7282893.png" />
+                                                <entry key="scalingPercent" value="53" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -124,7 +135,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="recycle" />
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="244639" />
                                     </map>
                                   </option>
                                 </PersistentState>
