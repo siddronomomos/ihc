@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            showProgressDialog();
 
             try {
                 authenticateUser(username, password);
@@ -55,32 +54,23 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void showProgressDialog() {
-        progress = new ProgressDialog(this);
-        progress.setMessage("Comprobando credenciales...");
-        progress.setCancelable(false);
-        progress.show();
-    }
-
     private void authenticateUser(String username, String password) throws InterruptedException {
-        showProgressDialog();
-        LoginRequest loginRequest = new LoginRequest(username, password);
+        LoginRequest loginRequest = new LoginRequest(username, password); // Cambiado para usar username
 
         ApiClient.getClient(this).login(loginRequest).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                dismissProgressDialog();
                 if (response.isSuccessful() && response.body() != null) {
                     LoginResponse loginResponse = response.body();
-                    // Guardar el token para futuras peticiones
+                    // Guardar el token y username
                     SessionManager.saveToken(LoginActivity.this, loginResponse.getToken());
                     SessionManager.saveUserId(LoginActivity.this, loginResponse.getUserId());
+                    SessionManager.saveUsername(LoginActivity.this, username);
 
-                    Intent intent = new Intent(LoginActivity.this, ActivityLoad.class);
+                    Intent intent = new Intent(LoginActivity.this, Principal.class);
                     startActivity(intent);
                     finish();
                 } else {
-
                     Toast.makeText(LoginActivity.this,
                             "Credenciales incorrectas",
                             Toast.LENGTH_SHORT).show();
@@ -89,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                dismissProgressDialog();
                 Toast.makeText(LoginActivity.this,
                         "Error de conexión: " + t.getMessage(),
                         Toast.LENGTH_LONG).show();
@@ -98,15 +87,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void dismissProgressDialog() {
-        if (progress != null && progress.isShowing()) {
-            progress.dismiss();
-        }
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        dismissProgressDialog();
     }
 }

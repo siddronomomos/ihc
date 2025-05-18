@@ -1,0 +1,17 @@
+<resources>
+    <string-array name="materiales_array">
+        <item>Plástico</item>
+        <item>Papel</item>
+        <item>Vidrio</item>
+        <item>Metal</item>
+        <item>Orgánico</item>
+    </string-array>
+
+    <string-array name="productos_array">
+        <item>Botella</item>
+        <item>Lata</item>
+        <item>Envase</item>
+        <item>Caja</item>
+        <item>Bolsa</item>
+    </string-array>
+</resources>
