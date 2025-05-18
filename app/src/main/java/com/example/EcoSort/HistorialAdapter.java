@@ -10,7 +10,7 @@ import com.example.EcoSort.models.HistorialResponse;
 import java.util.List;
 
 public class HistorialAdapter extends RecyclerView.Adapter<HistorialAdapter.HistorialViewHolder> {
-    private List<HistorialResponse.HistorialItem> historial;
+    private final List<HistorialResponse.HistorialItem> historial;
 
     public HistorialAdapter(List<HistorialResponse.HistorialItem> historial) {
         this.historial = historial;

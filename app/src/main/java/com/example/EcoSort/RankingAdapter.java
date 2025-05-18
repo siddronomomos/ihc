@@ -10,7 +10,7 @@ import com.example.EcoSort.models.RankingSemanalResponse;
 import java.util.List;
 
 public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.RankingViewHolder> {
-    private List<RankingSemanalResponse.RankingSemanalUser> ranking;
+    private final List<RankingSemanalResponse.RankingSemanalUser> ranking;
 
     public RankingAdapter(List<RankingSemanalResponse.RankingSemanalUser> ranking) {
         this.ranking = ranking;

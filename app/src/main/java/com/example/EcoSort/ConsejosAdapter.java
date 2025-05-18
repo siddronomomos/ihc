@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class ConsejosAdapter extends RecyclerView.Adapter<ConsejosAdapter.ConsejoViewHolder> {
-    private List<Consejo> consejos;
+    private final List<Consejo> consejos;
 
     public ConsejosAdapter(List<Consejo> consejos) {
         this.consejos = consejos;

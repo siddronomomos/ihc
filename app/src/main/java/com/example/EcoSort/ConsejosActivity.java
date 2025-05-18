@@ -32,8 +32,8 @@ public class ConsejosActivity extends AppCompatActivity {
 }
 
 class Consejo {
-    private String titulo;
-    private String descripcion;
+    private final String titulo;
+    private final String descripcion;
 
     public Consejo(String titulo, String descripcion) {
         this.titulo = titulo;

@@ -3,15 +3,15 @@ package com.example.EcoSort.models;
 import java.util.List;
 
 public class RankingResponse {
-    private String status;
-    private List<RankingUser> data;
+    private final String status;
+    private final List<RankingUser> data;
 
     public static class RankingUser {
-        private int id_usuario;
-        private String nombre_usuario;
-        private int puntos_totales;
-        private int nivel;
-        private String nivel_nombre;
+        private final int id_usuario;
+        private final String nombre_usuario;
+        private final int puntos_totales;
+        private final int nivel;
+        private final String nivel_nombre;
 
         public int getId_usuario() { return id_usuario; }
         public String getNombre_usuario() { return nombre_usuario; }
