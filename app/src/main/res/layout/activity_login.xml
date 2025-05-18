@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e2e0c8"
+        android:background="#F1EEE4"
         tools:context=".LoginActivity">
 
+    <!-- CardView con fondo blanco -->
     <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
+            android:background="#FFFFFF"
             app:cardCornerRadius="20dp"
             app:cardElevation="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -25,14 +26,15 @@
                 android:orientation="vertical"
                 android:padding="32dp">
 
+            <!-- Texto de Bienvenido -->
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Inicio de Sesión"
-                    android:textColor="#5C7285"
+                    android:text="Bienvenido"
+                    android:textColor="#3E5227"
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             <EditText
                     android:id="@+id/etUsername"
@@ -41,7 +43,7 @@
                     android:layout_marginTop="24dp"
                     android:hint="Usuario"
                     android:inputType="text"
-                    android:textColor="#5C7285"/>
+                    android:textColor="#5C7285" />
 
             <EditText
                     android:id="@+id/etPassword"
@@ -50,37 +52,42 @@
                     android:layout_marginTop="16dp"
                     android:hint="Contraseña"
                     android:inputType="textPassword"
-                    android:textColor="#5C7285"/>
+                    android:textColor="#5C7285" />
 
+            <!-- Botón de Iniciar Sesión -->
             <Button
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:backgroundTint="#5C7285"
-                    android:text="Ingresar"
-                    android:textColor="#FFFFFF"/>
+                    android:backgroundTint="#A7C585"
+                    android:text="Iniciar Sesión"
+                    android:textColor="#2F3E1D"
+                    android:textStyle="bold" />
 
+            <!-- Botón de Registrarse -->
             <Button
                     android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:backgroundTint="#A7B49E"
+                    android:backgroundTint="#6B8A47"
                     android:text="Registrarse"
-                    android:textColor="#5C7285"/>
+                    android:textColor="#F1EEE4"
+                    android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- Texto en la parte inferior -->
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="EcoSort 🌱"
+            android:text="EcoCycle"
             android:textColor="#5C7285"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
