@@ -20,9 +20,6 @@ public interface ApiService {
     @GET("estadisticas")
     Call<EstadisticasResponse> getEstadisticas();
 
-    @GET("ranking")
-    Call<RankingResponse> getRanking();
-
     @GET("perfil")
     Call<PerfilResponse> getPerfilUsuario();
 

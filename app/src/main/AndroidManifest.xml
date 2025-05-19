@@ -53,10 +53,6 @@
                 android:exported="false" />
 
         <activity
-                android:name=".RankingActivity"
-                android:exported="false" />
-
-        <activity
                 android:name=".ReciclarActivity"
                 android:exported="false" />
     </application>

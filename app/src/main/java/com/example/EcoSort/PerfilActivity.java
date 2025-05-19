@@ -1,6 +1,8 @@
 package com.example.EcoSort;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.EcoSort.models.PerfilResponse;
@@ -9,18 +11,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PerfilActivity extends AppCompatActivity {
-    private TextView tvUsername, tvEmail, tvPuntos, tvNivel;
+    private TextView tvUsername;
+    private TextView tvPuntosLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
+        // Inicializar vistas
         tvUsername = findViewById(R.id.tvUsername);
-        tvEmail = findViewById(R.id.tvEmail);
-        tvPuntos = findViewById(R.id.tvPuntos);
-        tvNivel = findViewById(R.id.tvNivel);
+        tvPuntosLabel = findViewById(R.id.tvPuntosLabel);
+        ImageButton btnBack = findViewById(R.id.btnBack);
 
+        // Configurar botón de regreso
+        btnBack.setOnClickListener(v -> finish());
+
+        // Cargar datos del perfil
         cargarDatosPerfil();
     }
 
@@ -31,9 +38,7 @@ public class PerfilActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     PerfilResponse perfil = response.body();
                     tvUsername.setText(perfil.getNombre_usuario());
-                    tvEmail.setText(perfil.getEmail());
-                    tvPuntos.setText(String.valueOf(perfil.getPuntos()));
-                    tvNivel.setText(perfil.getNivel_nombre());
+                    tvPuntosLabel.setText("TOTAL DE PUNTOS: " + perfil.getPuntos());
                 }
             }
 

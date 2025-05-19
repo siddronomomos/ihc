@@ -62,7 +62,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     LoginResponse loginResponse = response.body();
-                    // Guardar el token y username
                     SessionManager.saveToken(LoginActivity.this, loginResponse.getToken());
                     SessionManager.saveUserId(LoginActivity.this, loginResponse.getUserId());
                     SessionManager.saveUsername(LoginActivity.this, username);
